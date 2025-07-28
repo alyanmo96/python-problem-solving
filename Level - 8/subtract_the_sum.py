@@ -1,0 +1,122 @@
+#    Subtracts the sum of the digits from a number repeatedly
+#    until the resulting number exists as a key in the `items` dictionary.
+
+# List of 100 unique fruit and other fun string values
+items = {
+    1: "carambola",
+    2: "guava",
+    3: "mamoncillo",
+    4: "watermelon",
+    5: "kumquat",
+    6: "grapefruit",
+    7: "longan",
+    8: "hog plum",
+    9: "lucuma",
+    10: "miracle fruit",
+    11: "pineapple",
+    12: "cupuacu",
+    13: "jackfruit",
+    14: "blueberry",
+    15: "chempedak",
+    16: "coconut",
+    17: "blackberry",
+    18: "lychee",
+    19: "saskatoon",
+    20: "persimmon",
+    21: "cempedak",
+    22: "barbadine",
+    23: "nonfruit6",
+    24: "rambutan",
+    25: "olive",
+    26: "nonfruit4",
+    27: "currant",
+    28: "pear",
+    29: "white sapote",
+    30: "ugli fruit",
+    31: "sea grape",
+    32: "pineberry",
+    33: "santol",
+    34: "plantain",
+    35: "gooseberry",
+    36: "banana",
+    37: "starfruit",
+    38: "papaya",
+    39: "jicama",
+    40: "feijoa",
+    41: "passionfruit",
+    42: "mamey sapote",
+    43: "plum",
+    44: "nonfruit7",
+    45: "peach",
+    46: "melon",
+    47: "camu camu",
+    48: "fig",
+    49: "date",
+    50: "acerola",
+    51: "apple",
+    52: "buddha's hand",
+    53: "cherry",
+    54: "tangerine",
+    55: "loquat",
+    56: "apricot",
+    57: "quince",
+    58: "sugar apple",
+    59: "durian",
+    60: "chico",
+    61: "cloudberry",
+    62: "huckleberry",
+    63: "orange",
+    64: "langsat",
+    65: "jaboticaba",
+    66: "grape",
+    67: "rose apple",
+    68: "naranjilla",
+    69: "boysenberry",
+    70: "nonfruit3",
+    71: "mango",
+    72: "nonfruit2",
+    73: "nonfruit5",
+    74: "cranberry",
+    75: "nonfruit8",
+    76: "kiwi",
+    77: "nonfruit1",
+    78: "breadfruit",
+    79: "nonfruit4",
+    80: "nonfruit7",
+    81: "pomegranate",
+    82: "tamarind",
+    83: "chikoo",
+    84: "buddha's hand",
+    85: "yuzu",
+    86: "medlar",
+    87: "salak",
+    88: "soursop",
+    89: "nectarine",
+    90: "avocado",
+    91: "strawberry",
+    92: "bael",
+    93: "raspberry",
+    94: "mango",
+    95: "monstera",
+    96: "watermelon",
+    97: "nonfruit3",
+    98: "starfruit",
+    99: "currant",
+    100: "dragonfruit"
+}
+
+
+
+def subtract_sum(number):
+
+
+    #convert_to_str=str(number)
+    #convert_to_list=list(convert_to_str)
+
+    number=number - sum([int(x) for x in list(str(number))])
+    while number not in items:
+        number=number - sum([int(x) for x in list(str(number))])
+
+    return number    
+
+print(subtract_sum(325))
